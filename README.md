@@ -2,6 +2,22 @@
 
 A lightweight bash-based kiosk setup for Raspberry Pi that launches two Chromium instances in full-screen kiosk mode — one per HDMI output — and autostarts on login.
 
+## Why this project?
+
+Since none of the currently available solutions worked for my setup, I am publishing this workaround to help anyone trying to run a dual-monitor dashboard in Kiosk mode on Raspberry Pi OS.
+
+### The Problem
+The main challenge was that the `--window-position` flag was consistently ignored when running the startup sequence as an autostart script, even though it worked fine when entered manually in the terminal.
+
+### The Solution (Workaround)
+During testing, I discovered that Chromium in Kiosk mode always initializes on the screen where the mouse cursor is currently located. 
+
+To solve this, this script uses a strategic timing and positioning workaround:
+1. **Target Display 1:** The mouse cursor is moved to the first screen before the first Chromium instance is launched.
+2. **Delay:** A short pause ensures the first instance is correctly assigned to the display.
+3. **Target Display 2:** The mouse is then moved to the coordinates of the second detected screen, and the second Chromium instance is started.
+4. **Cleanup:** Finally, the mouse cursor is hidden using `unclutter` and moved to the bottom-right corner of the screen as a fail-safe.
+
 ---
 
 ## Requirements
