@@ -22,7 +22,7 @@ To solve this, this script uses a strategic timing and positioning workaround:
 
 ## Requirements
 
-- Raspberry Pi 4 or newer (tested on Pi 5) with Raspberry Pi OS (Wayland/wlroots compositor)
+- Raspberry Pi 4 or newer (tested on Pi 5) with Raspberry Pi OS (labwc)
 - Two monitors connected via HDMI-1 and HDMI-2
 - The following packages installed:
 
