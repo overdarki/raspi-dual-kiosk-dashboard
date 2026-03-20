@@ -37,7 +37,7 @@ sudo apt install wlrctl unclutter
 ### 1. Clone or copy the script
 
 ```bash
-cp raspi-dual-kiosk-dashboard.sh /home/pi/raspi-dual-kiosk-dashboard.sh
+wget -O /home/pi/raspi-dual-kiosk-dashboard.sh https://raw.githubusercontent.com/overdarki/raspi-dual-kiosk-dashboard/refs/heads/main/raspi-dual-kiosk-dashboard.sh
 chmod +x /home/pi/raspi-dual-kiosk-dashboard.sh
 ```
 
