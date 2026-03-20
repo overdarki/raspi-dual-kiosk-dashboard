@@ -28,7 +28,7 @@ chromium $COMMON_FLAGS \
   --user-data-dir=/home/pi/chromium-1 \
   --app=$URL_DISPLAY_1 &
 
-sleep 10 # Kurze Pause, damit die erste Instanz laden kann
+sleep 10 # short delay, so the first instance could load
 
 wlrctl pointer move $MOVE_DISTANCE_TO_SECOND_MONITOR 0 # move to next monitor
 sleep 5
